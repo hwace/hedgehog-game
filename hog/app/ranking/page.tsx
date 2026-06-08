@@ -86,7 +86,7 @@ export default function RankingPage() {
             <p className="text-sm text-hedgehog-muted/70">첫 번째 랭커가 되어보세요!</p>
           </div>
         ) : (
-          <RankingTable rankings={rankings as any} currentUserId={user.id} />
+          <RankingTable rankings={rankings} currentUserId={user.id} />
         )}
       </main>
     </div>
