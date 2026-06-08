@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anitto</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <button class="brand" data-route="home" type="button">
+          <span class="brand-mark">A</span>
+          <span>
+            <strong>Anitto</strong>
+            <small>ANA manitto</small>
+          </span>
+        </button>
+
+        <nav class="nav" id="nav"></nav>
+
+        <div class="user-chip" id="userChip">
+          <span id="chipName">게스트</span>
+          <button class="ghost small" id="logoutBtn" type="button">로그아웃</button>
+        </div>
+      </header>
+
+      <main id="view" class="view"></main>
+    </div>
+
+    <dialog id="confirmDialog" class="dialog">
+      <form method="dialog">
+        <h3 id="dialogTitle">확인</h3>
+        <p id="dialogMessage"></p>
+        <div class="dialog-actions">
+          <button class="ghost" value="cancel" type="submit">취소</button>
+          <button class="primary" id="dialogConfirm" value="confirm" type="submit">확인</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
